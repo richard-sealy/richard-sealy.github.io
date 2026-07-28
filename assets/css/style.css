@@ -1,0 +1,275 @@
+/* Site styles for richard-sealy.github.io */
+
+:root {
+  --paper: #f7f4ef;
+  --ink: #22333e;
+  --text: #2b2b28;
+  --muted: #6d6a62;
+  --accent: #96502e;
+  --rule: #ddd8cf;
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 112.5%;
+}
+
+body {
+  font-family: var(--serif);
+  background: var(--paper);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header .inner {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.4rem 1.25rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+}
+
+.wordmark {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-size: 0.82rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+/* Main content */
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 4.5rem;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  max-width: 21ch;
+  margin-bottom: 1.4rem;
+}
+
+.lede {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 34rem;
+}
+
+section {
+  margin-top: 3.2rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.9rem;
+  padding-top: 1.1rem;
+  border-top: 2px solid var(--ink);
+  max-width: 34rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.6rem 0 0.4rem;
+}
+
+p {
+  max-width: 34rem;
+  margin-bottom: 1rem;
+}
+
+ul,
+ol {
+  max-width: 32rem;
+  margin: 0 0 1rem 1.2rem;
+}
+
+li {
+  margin-bottom: 0.45rem;
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+em {
+  font-style: italic;
+}
+
+/* Post lists */
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  max-width: 34rem;
+}
+
+.post-list li {
+  margin: 0 0 1.8rem;
+}
+
+.post-list .post-date {
+  display: block;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+}
+
+.post-list .post-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.post-list .post-summary {
+  margin: 0.3rem 0 0;
+  color: var(--text);
+}
+
+/* Articles */
+
+article .post-date {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+}
+
+article h1 {
+  margin-bottom: 1.8rem;
+}
+
+article p {
+  margin-bottom: 1.15rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2.2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Footer */
+
+.site-footer {
+  background: var(--ink);
+  color: #cfd6da;
+  margin-top: auto;
+}
+
+.site-footer .inner {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.6rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.4rem 2rem;
+}
+
+.site-footer p {
+  margin: 0;
+  max-width: none;
+  font-size: 0.92rem;
+}
+
+.site-footer .footer-name {
+  color: #f3efe8;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.site-footer a {
+  color: #e8e3da;
+  text-decoration-color: rgba(232, 227, 218, 0.5);
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+.footer-contact {
+  text-align: right;
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 106%;
+  }
+
+  main {
+    padding-top: 2.6rem;
+  }
+
+  .footer-contact {
+    text-align: left;
+  }
+}
